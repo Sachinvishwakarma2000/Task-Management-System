@@ -1,6 +1,5 @@
 const request = require('supertest');
 const app = require('../src/app');
-require('./setup');
 
 describe('Tasks API (/api/tasks)', () => {
   let userAToken;

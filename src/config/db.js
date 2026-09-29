@@ -9,8 +9,10 @@ const config = require('./env');
  */
 const connectDB = async (uri = config.mongoUri) => {
   try {
+    const os = require('os');
     const conn = await mongoose.connect(uri, {
-      autoIndex: true
+      autoIndex: true,
+      runtimeAdapters: { os }
     });
 
     if (config.env !== 'test') {

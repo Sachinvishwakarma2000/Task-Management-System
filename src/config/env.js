@@ -6,8 +6,8 @@ dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
 const config = {
   env: process.env.NODE_ENV || 'development',
-  port: parseInt(process.env.PORT || '5000', 10),
-  mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/task_management_db',
+  port: parseInt(process.env.PORT || '5001', 10),
+  mongoUri: process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/task_management_db',
   jwtSecret: process.env.JWT_SECRET || 'default_jwt_secret_dev_key_replace_in_production',
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || '7d',
   corsOrigin: process.env.CORS_ORIGIN || '*'
